@@ -10,49 +10,7 @@ For advanced options, visit [their wiki](https://docs.overviewer.org) and learn 
 
 ## Advanced Configuration
 
-Here is the advanced configuration used to generate this website:
-
-```python
-worlds['survival'] = 'world'
-texturepath = 'client.jar'
-outputdir = '/mounts/remote-git-sync/map'
-
-renders['day'] = {
-    'world': 'survival',
-    'title': 'Daytime',
-    'rendermode': smooth_lighting,
-    'dimension': 'overworld'
-}
-
-renders['night'] = {
-    'world': 'survival',
-    'title': 'Nighttime',
-    'rendermode': smooth_night,
-    'dimension': 'overworld'
-}
-
-renders['nether'] = {
-    'world': 'survival',
-    'title': 'Nether (Northeast)',
-    'rendermode': nether_smooth_lighting,
-    'dimension': 'nether'
-}
-
-renders['nethersouth'] = {
-    'world': 'survival',
-    'title': 'Nether (Southwest)',
-    'rendermode': nether_smooth_lighting,
-    'dimension': 'nether',
-    'northdirection': 'lower-right'
-}
-
-renders['end'] = {
-    'world': 'survival',
-    'title': 'The End',
-    'rendermode': 'smooth_lighting',
-    'dimension': 'end'
-}
-```
+Check `config.py` for advanced configuration.
 
 This world was generated from a snapshot taken from the server backups rather than the live server, and the entire world directory was in a folder called `world` inside the Overviewer build directory. Textures were linked to a copy of the latest client jar (as of this writing, Minecraft snapshot 1.16-pre5, which is the version the Minecraft server is on) and placed in the same directory, named `client.jar`. Do note that since writing this guide, the latest version of Minecraft has been updated to 1.16-rc2.
 
